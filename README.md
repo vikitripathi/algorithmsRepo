@@ -1,4 +1,5 @@
 algorithmsRepo
 ==============
 
-Collection of basic algorithms , JAVA Pseudocode
+Basic Algorithms 
+Language used : JAVA
