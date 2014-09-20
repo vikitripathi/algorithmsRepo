@@ -7,16 +7,17 @@ public class Shuffle {
 		int N = a.length;
 		for (int i = 0; i < N; i++)
 		{
-		int r = rand.nextInt(i + 1); // between 0 &  i 
+		int r = rand.nextInt(i + 1);
+		//System.out.println(r);// between 0 &  i 
 		exch(a, i, r);
 		}
 		
 	}
 	
-	private static boolean less(Comparable v, Comparable w)
-	{ 
-		return (v.compareTo(w) < 0);
-	}
+//	private static boolean less(Comparable v, Comparable w)
+//	{ 
+//		return (v.compareTo(w) < 0);
+//	}
 	private static void exch(Comparable[] a, int i, int j)
 	{ 
 		Comparable swap = a[i];
