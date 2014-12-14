@@ -5,8 +5,11 @@ Find the largest M items in a stream of N items.  <- challenge Binary Heap solve
 //log N <- insert and log N <- delete
 //Key must be Comparable (bounded type parameter)
 /*
-Binary heap=> Array representation of a heap-ordered complete binary tree.
+Binary heap=> Array representation of a heap-ordered complete(balanced except for bottom level) binary tree.
 Heap-ordered binary tree. => ・Parent's key no smaller than children's keys.
+Largest key is a[1], which is root of binary tree.
+・Parent of node at k is at k/2.
+・Children of node at k are at 2k and 2k+1.
 */
 public class MaxPQ<Key extends Comparable<Key>>  
 {
@@ -39,6 +42,7 @@ public class MaxPQ<Key extends Comparable<Key>>
 			 pq[N+1] = null;
 			 return max;
 		 } 
+		 //Parent's key becomes smaller than one (or both) of its children's. used in delete operation
 		 private void sink(int k)
 		 {
 		 while (2*k <= N)
@@ -50,6 +54,8 @@ public class MaxPQ<Key extends Comparable<Key>>
 				 k = j;
 			 }
 		 }
+		 //swim performed when Child's key becomes larger key than its parent's key.
+		 //so to restore heap order 
 		 private void swim(int k)
 			 {
 				 while (k > 1 && less(k/2, k))
