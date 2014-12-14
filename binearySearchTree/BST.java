@@ -1,10 +1,16 @@
-//Binary Search Tree: Classic Data Structures to efficiently implement Symbol Table(Search, Insert, Iterate)
+//Binary Search Tree(Dynamic D.S.): Classic Data Structures to efficiently implement Symbol Table(Search, Insert, Iterate)
 //use of generic key value 
 //use of linked list to maintain record as per the BST requirement
+/*
+BST are explicit tree d.s.  based on linked list heaps are implicit tree implementation based on array
+BST are binary tree which are symmetric (keys of node are such that all child to the left have smaller keys and 
+all child to the right have larger keys whereas in Heaps its different) 
+*/
 public class BST<Key extends Comparable<Key>, Value> {
 	private Node root;//root of BST , instance variable
 	private class Node//inner class ??? again!
 	{
+		//four instance variables
 		private Key key;
 		private Value val;
 		private Node left, right;
@@ -19,9 +25,10 @@ public class BST<Key extends Comparable<Key>, Value> {
 	//else add new node at the required place
 	//client insert method!!!
 	//no of compares = 1+ depth of node
+	//we do it recursively for later better D.S. implementation
 	 public void put(Key key, Value val)
 	 {
-		 root = put(root, key, val);//recursive
+		 root = put(root, key, val);
 	 }
 	 private Node put(Node x, Key key, Value val)
 	 {
@@ -51,7 +58,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 			 if (cmp == 0)
 			 return x.val;
 		 }
-		 return null;//not in our symbol
+		 return null;//not in our symbol table
 	 }
 //	 public void delete(Key key)
 //	 {
