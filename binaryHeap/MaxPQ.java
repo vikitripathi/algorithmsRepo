@@ -4,6 +4,10 @@ Find the largest M items in a stream of N items.  <- challenge Binary Heap solve
 //implementing priority queue using binary heap
 //log N <- insert and log N <- delete
 //Key must be Comparable (bounded type parameter)
+/*
+Binary heap=> Array representation of a heap-ordered complete binary tree.
+Heap-ordered binary tree. => ・Parent's key no smaller than children's keys.
+*/
 public class MaxPQ<Key extends Comparable<Key>>  
 {
 	    private Key[] pq;
