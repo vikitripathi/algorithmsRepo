@@ -1,5 +1,6 @@
 //implementing priority queue using binary heap
 //log N <- insert and log N <- delete
+//Key must be Comparable (bounded type parameter)
 public class MaxPQ<Key extends Comparable<Key>>  
 {
 	    private Key[] pq;
