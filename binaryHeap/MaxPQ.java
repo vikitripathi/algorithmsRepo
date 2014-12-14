@@ -1,3 +1,6 @@
+/*
+Find the largest M items in a stream of N items.  <- challenge Binary Heap solves
+*/
 //implementing priority queue using binary heap
 //log N <- insert and log N <- delete
 //Key must be Comparable (bounded type parameter)
